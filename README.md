@@ -32,6 +32,6 @@ Once you have a decent grasp on that, start setting up your Ajax calls and setti
 ## Resources
 
 - [Full Screen Mockup](github-portfolio.png)
-- [GitHub User API](https://api.github.com/users/username) - change username
-- [GitHub API Docs](https://developer.github.com/v3/)
+- [GitHub User API](https://api.github.com/users/DPBefumo) - change username
+- [GitHub API Docs](https://developerx.github.com/v3/)
 - [Sawtooth banners with CSS](https://medium.com/coding-design/saw-tooth-banners-with-css-95c31e91c196)
