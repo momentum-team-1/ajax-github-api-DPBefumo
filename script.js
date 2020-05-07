@@ -1,15 +1,3 @@
-//output my info from my github account
-//have the ability to grab from my account
-//what information do I need to gather from my profile?
-  //the basics <h2>
-  //story title <h2>
-  //name > .name
-  //github URL > .html_url
-  //company > .company
-  //website > .blog
-  //bio > .bio
-  //avatar > .avatar_url
-
   let dataSection = document.querySelector('#github-data')
   let nameHeader  = document.querySelector('#name-header')
 
@@ -21,39 +9,31 @@
     const h1El = document.createElement('h1')
     h1El.innerText = data.name
     nameHeader.appendChild(h1El)
-    return data.name
+    const basic = document.createElement('h2')
+    basic.innerText = `The Basics`
+    dataSection.appendChild(basic)
+    const basicList = document.createElement('ul')
+    dataSection.appendChild(basicList)
+    const listItem1 = document.createElement('li')
+    listItem1.innerText = `Name: ${data.name}`
+    basicList.appendChild(listItem1)
+    const listItem2 = document.createElement('li')
+    listItem2.innerText = `GitHub Url: ${data.html_url}`
+    basicList.appendChild(listItem2)
+    const listItem3 = document.createElement('li')
+    listItem3.innerText = `Company: ${data.company}`
+    basicList.appendChild(listItem3)
+    const listItem4 = document.createElement('li')
+    listItem4.innerText = `Website: ${data.blog}`
+    basicList.appendChild(listItem4)
+    const story = document.createElement('h2')
+    story.innerText = `The Story`
+    dataSection.appendChild(story)
+    const bio = document.createElement('h6')
+    bio.innerText = `${data.bio}`
+    story.appendChild(bio)
+    const userImg = document.createElement('div')
+    userImg.innerHTML = `<img src= ${data.avatar_url}>`
+    dataSection.appendChild(userImg)
+    return data.basic
   })
-
-
-
-
-
-
-
-// fetch('https://api.github.com/users/DPBefumo')
-//   .then(function (response) {
-//     // console.log(response)
-//     return response.json()
-//   })
-//   .then(function (data) {
-//     // console.log(data)
-//     let orgName = data.orgName
-//     // console.log(orgName)
-//     return data.name
-//   })
-//   .then(reposUrl => fetch(reposUrl))
-//   .then(response => response.json())
-//   .then(function (reposData){
-//     // console.log(reposData)
-//     let container = document.querySelector('#github-data')
-//     const repoList = document.createElement('ul')
-//     container.appendChild(repoList)
-//     for (let repo of reposData){
-//       // console.log(repo.name)
-//       const listItem = document.createElement('li')
-//       listItem.innerHTML = repo.name
-//       // listItem.classList.add()
-//       repoList.appendChild(listItem)
-//     }
-//   // repoList.classList.add()
-//   })
